@@ -18,9 +18,7 @@ function addItem(state, item) {
 
 function deleteItem(state, item) {
     var index = state.items.indexOf(item);
-    if (index > -1) {
-        state.items.splice(index, 1);
-    }
+    state.items.splice(index, 1);
 }
 
 function renderShoppingList(state, element) {
@@ -37,7 +35,7 @@ $(function() {
         renderShoppingList(state, $('.shopping-list'));
     });
 
-    $('#js-shopping-list-form').on('click', '.shopping-item-delete', function(event) {
+    $('.shopping-list').on('click', '.shopping-item-delete', function(event) {
         event.preventDefault();
         deleteItem(state, $(this).closest('.shopping-item').val());
         renderShoppingList(state, $('.shopping-list'));
