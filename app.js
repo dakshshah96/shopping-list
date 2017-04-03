@@ -23,6 +23,7 @@ $(function() {
         event.preventDefault();
         addItem(state, $('#shopping-list-entry').val());
         renderShoppingList(state, $('.shopping-list'));
+        $('#shopping-list-entry').val('');
     });
 
     $('.shopping-list').on('click', '.shopping-item-delete', function(event) {
