@@ -33,6 +33,6 @@ $(function() {
 
     $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
         event.preventDefault();
-        $(this).closest('.shopping-item').toggleClass('shopping-item__checked');
+        $(this).parent().siblings('.shopping-item').toggleClass('shopping-item__checked');
     });
 });
